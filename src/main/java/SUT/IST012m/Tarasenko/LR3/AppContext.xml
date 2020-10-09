@@ -1,0 +1,16 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="head" class="SUT.IST012m.Tarasenko.LR3.Heads.PigeonHead"></bean>
+    <bean id="body" class="SUT.IST012m.Tarasenko.LR3.Bodies.GooseBody"></bean>
+    <bean id="legs" class="SUT.IST012m.Tarasenko.LR3.Legs.PigeonLegs"></bean>
+
+    <bean id="bird" class="SUT.IST012m.Tarasenko.LR3.Bird">
+        <constructor-arg index="0" ref="head"/>
+        <constructor-arg index="1" ref="body"/>
+        <constructor-arg index="2" ref="legs"/>
+        <!--<property name="head" value="GooseHead"/>-->
+    </bean>
+</beans>
